@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="shortcut icon" href="../assets/icon.png" type="image/.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsiveHome.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+    <section id="header">
+        <a href="../index.html"><img src="../assets/logo.png" alt="logo" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../sub-pages/shop.html">Shop</a></li>
+                <li><a href="../sub-pages/blog.html">Blog</a></li>
+                <li><a href="../sub-pages/about.html">About</a></li>
+                <li><a href="../sub-pages/contact.html">Contact</a></li>
+                <li class="lg-bag"><a href="../sub-pages/cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li><a class="active" href="account.php"><i class="fas fa-user-alt"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="./sub-pages/cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+
+    <div class="account-page">
+        <div class="container">
+            <div class="col-2">
+                <img src="../assets/banner/image1.png" width="100%"/>
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="showLogin()">Login</span>
+                        <span onclick="showRegister()">Register</span>
+                    </div>
+                    <div class="form-content">
+                        <form id="LoginForm" class="active" method="post" action="login.php">
+                            <input type="text" name="username" placeholder="Username">
+                            <input type="password" name="password" placeholder="Password">
+                            <button type="submit" class="normal btn">Login</button>
+                            <a href="#">Forgot Password</a>
+                        </form>
+                        <form id="RegForm" method="post" action="register.php">
+                            <input type="text" name="username" placeholder="Username">
+                            <input type="email" name="email" placeholder="Email">
+                            <input type="password" name="password" placeholder="Password">
+                            <button type="submit" class="normal btn">Register</button>                  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="../assets/logo.png" alt="logo" class="logoS">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone:</strong>+01 2222 3665 / (+91) 01 2345 6763</p>
+            <p><strong>Hours:</strong>10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account </h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My WishList</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="../assets/pay/app.jpg" alt="app">
+                <img src="../assets/pay/play.jpg" alt="play">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="../assets/pay/pay.png" alt="pay">
+        </div>
+        <div class="copyright">
+            <p>2023 , Tejas Nasre - HTML CSS JS Ecommerce Template</p>
+        </div>
+    </footer>
+    <script src="../js/responsiveHome.js"></script>
+    <script>
+        function showLogin() {
+            document.getElementById("LoginForm").classList.add("active");
+            document.getElementById("RegForm").classList.remove("active");
+        }
+
+        function showRegister() {
+            document.getElementById("LoginForm").classList.remove("active");
+            document.getElementById("RegForm").classList.add("active");
+        }
+    </script>
+</body>
+</html>
